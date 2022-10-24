@@ -17,7 +17,7 @@ class GlobalFunctions():
         else:
             self.driver.close()
 
-    def tiempo(self, timer):
+    def time(self, timer):
         t = time.sleep(timer)
         return t
     
@@ -47,3 +47,7 @@ class GlobalFunctions():
         n = self.driver.find_element(By.XPATH, text)
         a = ActionChains(self.driver)
         a.move_to_element(n).perform()
+
+    def validate_quantity_more_than(self, qty):
+        quantity = self.driver.find_element(By.CLASS_NAME, "cart_quantity_input").get_attribute('value')
+        assert int(quantity) >= qty
