@@ -118,10 +118,6 @@ def test_get_order_reference():
 
 
 
-MC;4nt0n3ll4t34m0
-
-
-
 
 
 
